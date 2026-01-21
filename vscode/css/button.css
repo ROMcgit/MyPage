@@ -4,7 +4,6 @@
 
 .button-icon-that-pops-up a{
     position: relative;                      /*位置(自身が基準点)*/
-    left: 80px;                              /* 右に60pxずらす */
     display: flex;                           /*横並び*/
     justify-content: space-around;           /*左右に均等な隙間*/
     align-items: center;                     /*上下中央揃え*/
@@ -37,4 +36,33 @@
     transform: translateY(-2px); /*ボタンが少し浮き上がる*/
     /*浮き上がった時の影を強めて立体感を演出*/
     box-shadow: 0 15px 30px -5px rgb(0 0 0 / 15%), 0 0 5px rgb(0 0 0 / 10%);
+}
+
+/* 左 */
+.button-icon-that-pops-up.left a{
+    left: 150px; /*右に80pxずらす*/
+}
+
+/* 中央 */
+.button-icon-that-pops-up.center a{
+    left: 50%; /*親の横幅の50%の位置にする*/
+}
+
+/* 右 */
+.button-icon-that-pops-up.right a{
+    right: 30px; /*左に30pxずらす*/
+}
+
+/* 固定 */
+.button-icon-that-pops-up.fixed a{
+    position: fixed;   /*画面に固定*/
+    right: 30px;       /*右から30px*/
+    bottom: 30px;      /*下から30px*/
+}
+
+/* 横並び */
+.button-flex{
+  display: flex;              /*横並び*/
+  justify-content: center;    /*全体を中央寄せ*/
+  gap: 300px;                  /*ボタン同士の間隔*/
 }

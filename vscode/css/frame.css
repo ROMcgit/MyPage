@@ -48,7 +48,7 @@
 }
 
 /* 横に並べる */
-.box-roundedCorner .flex{
+.box-roundedCorner.flex{
     display: flex;           /*横一列に並べるようにする*/
     color: black;          /*文字色*/
     align-items: flex-start; /*上揃えにする*/
