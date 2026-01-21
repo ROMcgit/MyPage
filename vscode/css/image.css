@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+/*ドナルドコスプレ*/
+.image-donald{
+    width: 300px;          /*幅(高さは自動)*/
+    display: inline-block; /*文字のように横に並べる*/
+    vertical-align: top;   /*上にそろえる*/
+}
+
+/*ドナルドコスプレ画像の横の文字*/
+.image-donald-text{
+    font-size: 29px; /* 大きさ */
+}

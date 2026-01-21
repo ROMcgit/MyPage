@@ -1,0 +1,726 @@
+@charset "utf-8";
+
+/* #region シンプルな囲み枠 */
+
+/*** 実線で囲む(シンプル) ***/
+
+.box-simple {
+    padding: 0.5em 1em;          /*ボックスの余白(中の文字と枠の間) 上下 : 左右*/
+    margin: 2em 0;               /*ボックスの外側の余白(他の要素との距離)*/
+    font-weight: bold;           /*文字の太さ(太字)*/
+    background-color: white;   /*背景色*/
+    border: solid 3px #000000; /*線*/
+    display: inline-block;       /*大きさを文字に合わせる*/
+}
+
+.box-simple p {
+    margin: 0;  /*段落の外側の余白を0にする*/
+    padding: 0; /*段落の内側の余白を0にする*/
+}
+
+/* 横に並べる */
+.box-simple .flex{
+    display: flex;           /*横一列に並べるようにする*/
+    align-items: flex-start; /*上揃えにする*/
+    justify-content: center; /*横方向中央に配置*/
+    gap: 12px;               /*画像と文字の間に少しスペース*/
+}
+
+
+
+/**************************************************************************************/
+
+/*** 角丸 ***/
+
+.box-roundedCorner{
+    padding: 0.5em 1em;          /*ボックスの余白(中の文字と枠の間) 上下 : 左右*/
+    margin: 2em 0;               /*ボックスの外側の余白(他の要素との距離)*/
+    font-weight: bold;           /*文字の太さ(太字)*/
+    color: #6091d3;            /*文字色*/
+    background: #FFF;          /*背景色*/
+    border: solid 6px #6091d3; /*線*/
+    border-radius: 10px;         /*角の丸み*/
+}
+
+.box-roundedCorner p {
+    margin: 0;  /*段落の外側の余白を0にする*/
+    padding: 0; /*段落の内側の余白を0にする*/
+}
+
+/* 横に並べる */
+.box-roundedCorner .flex{
+    display: flex;           /*横一列に並べるようにする*/
+    color: black;          /*文字色*/
+    align-items: flex-start; /*上揃えにする*/
+    justify-content: center; /*横方向中央に配置*/
+    gap: 12px;               /*画像と文字の間に少しスペース*/
+}
+
+/**************************************************************************************/
+
+/*** 背景塗りつぶし ***/
+
+.box-background-fill{
+    padding: 0.5em 1em;    /*ボックスの余白(中の文字と枠の間) 上下 : 左右*/
+    margin: 2em 0;         /*ボックスの外側の余白(他の要素との距離)*/
+    color: #2c2c2f;      /*文字色*/
+    background: #cde4ff; /*背景色*/
+}
+
+.box-background-fill p{
+    margin: 0;  /*段落の外側の余白を0にする*/
+    padding: 0; /*段落の内側の余白を0にする*/
+}
+
+/**************************************************************************************/
+
+/*** 上下にだけ線 ***/
+
+.box-only-up-and-down{
+    padding: 8px 19px;                  /*ボックスの余白(中の文字と枠の間) 上下 : 左右*/
+    margin: 2em 0;                      /*ボックスの外側の余白(他の要素との距離)*/
+    color: #2c2c2f;                   /*文字色*/
+    background: #cde4ff;              /*背景色*/
+    border-top:    solid 5px #5989cf; /*上側の線*/
+    border-bottom: solid 5px #5989cf; /*下側の線*/
+}
+
+.box-only-up-and-down p{
+    margin: 0;  /*段落の外側の余白を0にする*/
+    padding: 0; /*段落の内側の余白を0にする*/
+}
+
+/**************************************************************************************/
+
+/*** 二重線の枠 ***/
+
+.box-double-line{
+    padding: 0.5em 1em;           /*ボックスの余白(中の文字と枠の間) 上下 : 左右*/
+    margin: 2em 0;                /*ボックスの外側の余白(他の要素との距離)*/
+    background-color: white;    /*背景色*/
+    border: double 10px #4ec4d3; /*二重線*/
+    display: inline-block;        /*横幅を文字の数に合わせる*/
+}
+
+.box-double-line p{
+    margin: 0;  /*段落の外側の余白を0にする*/
+    padding: 0; /*段落の内側の余白を0にする*/
+}
+
+/**************************************************************************************/
+
+/*** 破線の枠 ***/
+
+.box-dashed-line{
+    padding: 0.5em 1em;           /*ボックスの余白(中の文字と枠の間) 上下 : 左右*/
+    margin: 2em 0;                /*ボックスの外側の余白(他の要素との距離)*/
+    background: #f0f7ff;        /*背景色*/
+    border: dashed 2px #5b8bd0; /*点線*/
+}
+
+.box-dashed-line p{
+    margin: 0;  /*段落の外側の余白を0にする*/
+    padding: 0; /*段落の内側の余白を0にする*/
+}
+
+/**************************************************************************************/
+
+/*** 左右二重線 ***/
+
+.box-double-line-on-both-sides{
+    padding: 0.5em 1em;                 /*ボックスの余白(中の文字と枠の間) 上下 : 左右*/
+    margin: 2em 0;                      /*ボックスの外側の余白(他の要素との距離)*/
+    color: #474747;                   /*文字色*/
+    background: whitesmoke;           /*背景色*/
+    border-left: double 7px #4ec4d3;  /*左線*/
+    border-right: double 7px #4ec4d3; /*右線*/
+}
+
+.box-double-line-on-both-sides p{
+    margin: 0;  /*段落の外側の余白を0にする*/
+    padding: 0; /*段落の内側の余白を0にする*/
+}
+
+/**************************************************************************************/
+
+/*** 左にだけ太線 ***/
+
+.box-thick-line-only-on-the-left{
+    padding: 0.5em 1em;                /*ボックスの余白(中の文字と枠の間) 上下 : 左右*/
+    margin: 2em 0;                     /*ボックスの外側の余白(他の要素との距離)*/
+    color: #232323;                  /*文字色*/
+    background: #fff8e8;             /*背景色*/
+    border-left: solid 10px #ffc06e; /*左の線*/
+}
+
+.box-thick-line-only-on-the-left p{
+    margin: 0;  /*段落の外側の余白を0にする*/
+    padding: 0; /*段落の内側の余白を0にする*/
+}
+
+/**************************************************************************************/
+
+/*** 上にだけ太線 ***/
+
+.box-thick-line-only-on-top{
+    padding: 0.5em 1em;               /*ボックスの余白(中の文字と枠の間) 上下 : 左右*/
+    margin: 2em 0;                    /*ボックスの外側の余白(他の要素との距離)*/
+    color: #ff7d6e;                 /*文字色*/
+    background: #ffebe9;            /*背景色*/
+    border-top: solid 10px #ff7d6e; /*上の線*/
+}
+
+.box-thick-line-only-on-top p{
+    margin: 0;  /*段落の外側の余白を0にする*/
+    padding: 0; /*段落の内側の余白を0にする*/
+}
+
+/**************************************************************************************/
+
+/*** 影を付ける ***/
+
+.box-add-a-shadow{
+    padding: 0.5em 1em;                          /*ボックスの余白(中の文字と枠の間) 上下 : 左右*/
+    margin: 2em 0;                               /*ボックスの外側の余白(他の要素との距離)*/
+    color: #00BCD4;                            /*文字色*/
+    background: #e4fcff;                       /*背景色*/
+    border-top: solid 6px #1dc1d6;             /*上の線*/
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32); /*影*/
+}
+
+.box-add-a-shadow p{
+    margin: 0;  /*段落の外側の余白を0にする*/
+    padding: 0; /*段落の内側の余白を0にする*/
+}
+
+/**************************************************************************************/
+
+/*** スマートなデザイン ***/
+
+.box-smart-design{
+    padding: 0.5em 1em;                          /*ボックスの余白(中の文字と枠の間) 上下 : 左右*/
+    margin: 2em 0;                               /*ボックスの外側の余白(他の要素との距離)*/
+    color: #5d627b;                            /*文字色*/
+    background: white;                         /*背景色*/
+    border-top: solid 5px #5d627b;             /*上の線*/
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22); /*影*/
+}
+
+.box-smart-design p{
+    margin: 0;  /*段落の外側の余白を0にする*/
+    padding: 0; /*段落の内側の余白を0にする*/
+}
+
+/**************************************************************************************/
+
+/*** 分厚いボード ***/
+
+.box-thick-board{
+    padding: 0.5em 1em;                 /*ボックスの余白(中の文字と枠の間) 上下 : 左右*/
+    margin: 2em 0;                      /*ボックスの外側の余白(他の要素との距離)*/
+    color: #5989cf;                   /*文字色*/
+    background: #c6e4ff;              /*背景色*/
+    border-bottom: solid 6px #aac5de; /*下の線*/
+    border-radius: 9px;                 /*角を丸くする*/
+}
+
+.box-thick-board p{
+    margin: 0;  /*段落の外側の余白を0にする*/
+    padding: 0; /*段落の内側の余白を0にする*/
+}
+
+/**************************************************************************************/
+
+/*** 影を付ける(角丸) ***/
+
+.box-add-a-shadow{
+     padding: 0.5em 1em;                         /*ボックスの余白(中の文字と枠の間) 上下 : 左右*/
+    margin: 2em 0;                               /*ボックスの外側の余白(他の要素との距離)*/
+    color: #FFF;                               /*文字色*/
+    background: #6eb7ff;                       /*背景色*/
+    border-bottom: solid 6px #3f87ce;          /*下の線*/
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25); /*影*/
+    border-radius: 9px;                          /*角を丸くする*/
+}
+
+.box-add-a-shadow p{
+    margin: 0;  /*段落の外側の余白を0にする*/
+    padding: 0; /*段落の内側の余白を0にする*/
+}
+
+/* #endregion */
+
+
+/* #region かわいいボックスデザイン */
+
+/*** 布風 ***/
+
+.box-cloth-wind{
+    padding: 0.2em 0.5em;                   /*ボックスの余白(中の文字と枠の間) 上下 : 左右*/
+    margin: 2em 0;                          /*ボックスの外側の余白(他の要素との距離)*/
+    background: #d6ebff;                  /*背景色*/
+    box-shadow: 0px 0px 0px 10px #d6ebff; /*影*/
+    border: dashed 2px white;             /*破線*/
+}
+
+.box-cloth-wind p{
+    margin: 0;  /*段落の外側の余白を0にする*/
+    padding: 0; /*段落の内側の余白を0にする*/
+}
+
+/*** ピンクver ***/
+
+.box-cloth-wind.pink{
+    padding: 0.2em 0.5em;                   /*ボックスの余白(中の文字と枠の間) 上下 : 左右*/
+    margin: 2em 0;                          /*ボックスの外側の余白(他の要素との距離)*/
+    color: #565656;                       /*文字色*/
+    background: #ffeaea;                  /*背景色*/
+    box-shadow: 0px 0px 0px 10px #ffeaea; /*影*/
+    border: dashed 2px #ffc3c3;           /*破線*/
+    border-radius: 8px;                     /*角の丸み*/
+}
+
+.box-cloth-wind.pink p {
+    margin: 0;  /*段落の外側の余白を0にする*/
+    padding: 0; /*段落の内側の余白を0にする*/
+}
+
+/**************************************************************************************/
+
+/*** ストライプ(しましま模様) ***/
+
+.box-stripe{
+    padding: 0.5em 1em; /*ボックスの余白(中の文字と枠の間) 上下 : 左右*/
+    margin: 2em 0;      /*ボックスの外側の余白(他の要素との距離)*/
+    
+    /*Chromeでも動くように*/
+    background: -webkit-repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px,#e9f4ff 3px, #e9f4ff 7px);
+    /*しましま模様(斜め)*/
+    background: repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px,#e9f4ff 3px, #e9f4ff 7px);
+}
+
+.box-stripe p{
+    margin: 0;  /*段落の外側の余白を0にする*/
+    padding: 0; /*段落の内側の余白を0にする*/
+}
+
+/* #endregion */
+
+
+/* #region おしゃれなデザイン */
+
+/* #region 交差線 */
+
+.box-intersection-line{
+    padding: 0.5em 1.5em;             /*ボックスの余白(中の文字と枠の間) 上下 : 左右*/
+    margin:2em 0;                     /*ボックスの外側の余白(他の要素との距離)*/
+    position: relative;               /*線の位置(自身を基準点にする)*/
+    border-top: solid 2px black;    /*上の線*/
+    border-bottom: solid 2px black; /*下の線*/
+}
+
+.box-intersection-line::before, .box-intersection-line::after{
+    content: '';                       /*空文字(文字を表示したいなら入力)*/
+    position: absolute;                /*線の位置*/
+    top: -10px;                        /*上*/
+    width: 2px;                        /*縦線の太さ*/
+    height: -webkit-calc(100% + 20px); /*箱の高さ*/
+    height: calc(100% + 20px);         /*箱の高さ*/
+    background-color: black;         /*縦線の色*/
+}
+
+.box17:before {left: 10px;} /*左から10pxの位置に縦線*/
+.box17:after {right: 10px;} /*右から10pxの位置に縦線*/
+
+.box-intersection-line p{
+    margin: 0;  /*段落の外側の余白を0にする*/
+    padding: 0; /*段落の内側の余白を0にする*/
+}
+
+/* #endregion */
+
+/**************************************************************************************/
+
+/* #region 角に円形 ***/
+
+.box-rounded-corner{
+    padding: 0.25em 1em;         /*ボックスの余白(中の文字と枠の間) 上下 : 左右*/
+    margin:2em 0;                /*ボックスの外側の余白(他の要素との距離)*/
+    position: relative;          /*線の位置(自身を基準点にする)*/
+    border: solid 2px #ffcb8a; /*線*/
+    border-radius: 3px 0 3px 0;  /*角の丸み*/
+}
+
+.box-rounded-corner::before, .box-rounded-corner.box17:after
+{
+    content: '';                 /*空文字(文字を表示したいなら入力)*/
+    position: absolute;          /*位置(基準から指定の場所に設置)*/
+    width:10px;                  /*幅*/
+    height: 10px;                /*高さ*/
+    border: solid 2px #ffcb8a; /*線*/
+    border-radius: 50%;          /*角の丸み*/
+}
+
+.box-rounded-corner::before{
+    bottom:-12px; /*下*/
+    right:-12px;  /*右*/
+}
+
+.box-rounded-corner::after{
+    top:-12px;  /*上*/
+    left:-12px; /*左*/
+}
+
+.box-rounded-corner p{
+    margin: 0;  /*段落の外側の余白を0にする*/
+    padding: 0; /*段落の内側の余白を0にする*/
+}
+
+/* #endregion */
+
+/**************************************************************************************/
+
+/* #region カギカッコ */
+
+.box-quotation-marks{
+    padding:0.25em 1em; /*ボックスの余白(中の文字と枠の間) 上下 : 左右*/
+    position: relative; /*線の位置(自身を基準点にする)*/
+}
+
+.box-quotation-marks::before, .box-quotation-marks.box17:after{
+    content:'';            /*空文字(文字を表示したいなら入力)*/
+    width: 20px;           /*幅*/
+    height: 30px;          /*高さ*/
+    position: absolute;    /*位置(基準から指定の場所に設置)*/
+    display: inline-block; /*表示方法(文字みたいに横に並べられて、箱みたいにサイズもいじれる)*/
+}
+
+.box-quotation-marks::before{
+    border-left: solid 1px #5767bf; /*左の線*/
+    border-top: solid 1px #5767bf;  /*上の線*/
+    top:0;                            /*上*/
+    left: 0;                          /*左*/
+}
+
+.box-quotation-marks::after{
+    border-right: solid 1px #5767bf;  /*右の線*/
+    border-bottom: solid 1px #5767bf; /*下の線*/
+    bottom:0;                           /*下*/
+    right: 0;                           /*右*/
+}
+
+.box-quotation-marks p{
+    margin: 0;  /*段落の外側の余白を0にする*/
+    padding: 0; /*段落の内側の余白を0にする*/
+}
+
+/* #endregion */
+
+/**************************************************************************************/
+
+/* #region 点線の大括弧 */
+
+.box-dashed-brackets{
+    padding: 0.25em 1em;   /*ボックスの余白(中の文字と枠の間) 上下 : 左右*/
+    margin: 2em 0;         /*ボックスの外側の余白(他の要素との距離)*/
+    position: relative;    /*線の位置(自身を基準点にする)*/
+    top: 0;                /*上*/
+    background: #efefef; /*背景色*/
+}
+
+.box-dashed-brackets::before, .box-dashed-brackets::after{
+    content:'';             /*空文字(文字を表示したいなら入力)*/
+    position: absolute;     /*位置(基準から好きな場所に置く)*/
+    top: 0;                 /*上*/
+    width: 10px;            /*幅*/
+    height: 100%;           /*高さ*/
+    display: inline-block;  /*横に並べる*/
+    box-sizing: border-box; /*(コンテンツ + padding + border)全部込み*/
+}
+
+.box-dashed-brackets::after{
+    border-left: dotted 2px #15adc1;   /*左*/
+    border-top: dotted 2px #15adc1;    /*上*/
+    border-bottom: dotted 2px #15adc1; /*下*/
+    left: 0;                             /*左*/
+}
+
+.box-dashed-brackets p {
+    margin: 0;  /*段落の外側の余白を0にする*/
+    padding: 0; /*段落の内側の余白を0にする*/
+}
+
+/* #endregion */
+
+/**************************************************************************************/
+
+/*** グラデーション ***/
+
+.box-gradient{
+    padding: 0.5em 1em; /*ボックスの余白(中の文字と枠の間) 上下 : 左右*/
+    /*グラデーション設定*/
+    background: -moz-linear-gradient(#ffb03c, #ff708d);
+    background: -webkit-linear-gradient(#ffb03c, #ff708d);
+    background: linear-gradient(to right, #ffb03c, #ff708d);
+    color: #FFF; /*色*/
+}
+
+.box-gradient p{
+    margin: 0;  /*段落の外側の余白を0にする*/
+    padding: 0; /*段落の内側の余白を0にする*/
+}
+
+/**************************************************************************************/
+
+/*** 紙風 ***/
+
+.box-paper-wind{
+    padding: 0.5em 1em;                            /*ボックスの余白(中の文字と枠の間) 上下 : 左右*/
+    margin: 1em 0;                                 /*ボックスの外側の余白(他の要素との距離)*/
+    background: #f4f4f4;                         /*背景*/
+    border-left: solid 6px #5bb7ae;              /*左の線*/
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.33); /*影*/
+}
+
+.box-paper-wind p{
+    margin: 0;  /*段落の外側の余白を0にする*/
+    padding: 0; /*段落の内側の余白を0にする*/
+}
+
+/**************************************************************************************/
+
+/* #region 考えごと風 */
+
+.box-lost-in-thought{
+    padding: 8px 15px;      /*ボックスの余白(中の文字と枠の間) 上下 : 左右*/
+    margin: 2em 0 2em 40px; /*ボックスの外側の余白(他の要素との距離)*/
+    position: relative;     /*線の位置(自身を基準点にする)*/
+    background: #fff0c6;  /*背景色*/
+    border-radius: 30px;    /*角の丸み*/
+}
+
+.box-lost-in-thought::before{
+    font-family: FontAwesome;  /*アイコンとして描く*/
+    content: "\f111";          /*表示文字*/
+    position: absolute;        /*位置(基準から指定の場所に設置)*/
+    font-size: 15px;           /*文字の大きさ*/
+    left: -40px;               /*左*/
+    bottom: 0;                 /*下*/
+    color: #fff0c6;          /*色*/
+}
+
+.box-lost-in-thought::after{
+    font-family: FontAwesome; /*アイコンとして描く*/
+    content: "\f111";         /*表示文字*/
+    position: absolute;       /*位置(基準から指定の場所に設置)*/
+    font-size: 23px;          /*文字の大きさ*/
+    left: -23px;              /*左*/
+    bottom: 0;                /*下*/
+    color: #fff0c6;         /*色*/
+}
+
+.box-lost-in-thought p{
+    margin: 0;  /*段落の外側の余白を0にする*/
+    padding: 0; /*段落の内側の余白を0にする*/
+}
+
+/* #endregion */
+
+/**************************************************************************************/
+
+/*** 吹き出し ***/
+
+.box-speech-bubble{
+    padding: 0.5em 0.7em;  /*ボックスの余白(中の文字と枠の間) 上下 : 左右*/
+    margin: 2em 0;         /*ボックスの外側の余白(他の要素との距離)*/
+    position: relative;    /*線の位置(自身を基準点にする)*/
+    background: #e6f4ff; /*背景色*/
+    color: #5c98d4;      /*色*/
+    font-weight: bold;     /*太字*/
+}
+
+.box-speech-bubble::after{
+    content: '';                      /*空文字(文字を表示したいなら入力)*/
+    position: absolute;               /*位置(基準から指定の場所に設置)*/
+    top: 100%;                        /*上*/
+    left: 30px;                       /*左*/
+    border: 15px solid transparent;   /*見えないけど存在する太い枠をつくる*/
+    border-top: 15px solid #e6f4ff; /*上の線*/
+    width: 0;                         /*幅*/
+    height: 0;                        /*高さ*/
+}
+
+.box-speech-bubble p{
+    margin: 0;  /*段落の外側の余白を0にする*/
+    padding: 0; /*段落の内側の余白を0にする*/
+}
+
+/**************************************************************************************/
+
+/*** めくれたテープ風 ***/
+
+.box-peeling-tape-style{
+    padding: 0.2em 0.5em;                  /*ボックスの余白(中の文字と枠の間) 上下 : 左右*/
+    position: relative;                    /*線の位置(自身を基準点にする)*/
+    background: #fff0cd;                 /*背景色*/
+    box-shadow: 0px 0px 0px 5px #fff0cd; /*影*/
+    border: dashed 2px white;            /*白い点線の枠を、2pxの太さで引く*/
+    color: #454545;                      /*色*/
+}
+
+.box-peeling-tape-style::after{
+    content: '';                                     /*空文字(文字を表示したいなら入力)*/
+    position: absolute;                              /*位置(基準から指定の場所に設置)*/
+    right: -7px;                                     /*右*/
+    top: -7px;                                       /*上*/
+    border-width: 0 15px 15px 0;                     /*枠の太さを4方向まとめて指定*/
+    border-style: solid;                             /*実線*/
+    border-color: #ffdb88 #fff #ffdb88;       /*線の色(上、左右、下)*/
+    box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15); /*影*/
+}
+
+/* #endregion */
+
+
+/* #region タイトル付き */
+
+/*** 枠の途中にタイトル ***/
+
+.box-title-in-the-middle-of-the-frame{
+    padding: 0.5em 1em;          /*ボックスの余白(中の文字と枠の間) 上下 : 左右*/
+    margin: 2em 0;               /*ボックスの外側の余白(他の要素との距離)*/
+    position: relative;          /*線の位置(自身を基準点にする)*/
+    border: solid 3px #95ccff; /*実線 線の太さ 薄めの青(水色)っぽい色*/
+    border-radius: 8px;          /*角を丸くする*/
+}
+
+.box-title-in-the-middle-of-the-frame .box-title{
+    padding: 0 9px;        /*ボックスの余白(中の文字と枠の間) 上下 : 左右*/
+    position: absolute;    /*位置(基準から指定の場所に設置)*/
+    display: inline-block; /*文字みたいに横に並べる*/      
+    top: -13px;            /*上*/
+    left: 10px;            /*左*/
+    line-height: 1;        /*ラインの高さ*/
+    font-size: 19px;       /*文字サイズ*/
+    background: #FFF;    /*背景色*/ 
+    color: #95ccff;      /*色*/
+    font-weight: bold;     /*文字を太くする*/   
+}
+
+.box-title-in-the-middle-of-the-frame p{
+    margin: 0;  /*段落の外側の余白を0にする*/
+    padding: 0; /*段落の内側の余白を0にする*/
+}
+
+/**************************************************************************************/
+
+/*** ラベルをつけたようなデザイン ***/
+
+.box-it-has-a-label{
+    padding: 0.5em 1em;          /*ボックスの余白(中の文字と枠の間) 上下 : 左右*/
+    margin: 2em 0;               /*ボックスの外側の余白(他の要素との距離)*/
+    position: relative;          /*線の位置(自身を基準点にする)*/
+    border: solid 3px #62c1ce; /*実線 線の太さ 薄めの青(水色)っぽい色*/
+}
+
+.box-it-has-a-label .box-title{
+    padding: 0 9px;             /*ボックスの余白(中の文字と枠の間) 上下 : 左右*/
+    position: absolute;         /*位置(基準から指定の場所に設置)*/
+    display: inline-block;      /*文字みたいに横に並ぶ*/
+    top: -27px;                 /*上*/
+    left: -3px;                 /*左*/
+    height: 25px;               /*高さ*/
+    line-height: 25px;          /*行の高さ*/
+    font-size: 17px;            /*文字サイズ*/
+    background: #62c1ce;      /*背景色*/
+    color: #ffffff;           /*色*/
+    font-weight: bold;          /*文字を太くする*/
+    border-radius: 5px 5px 0 0; /*角を丸くする*/
+}
+
+.box-it-has-a-label p{
+    margin: 0;  /*段落の外側の余白を0にする*/
+    padding: 0; /*段落の内側の余白を0にする*/
+}
+
+/**************************************************************************************/
+
+/*** ボックス内にラベル ***/
+
+.box-label-inside-the-box{
+    padding: 25px 10px 7px;      /*ボックスの余白(中の文字と枠の間) 上下 : 左右*/
+    margin: 2em 0;               /*ボックスの外側の余白(他の要素との距離)*/
+    position: relative;          /*線の位置(自身を基準点にする)*/
+    border: solid 2px #FFC107; /*実線　線の太さ　オレンジ*/
+}
+
+.box-label-inside-the-box .box-title{
+    padding: 0 9px;        /*ボックスの余白(中の文字と枠の間) 上下 : 左右*/
+    position: absolute;    /*位置(基準から指定の場所に設置)*/
+    display: inline-block; /*文字みたいに横に並ぶ*/
+    top: -2px;             /*上*/
+    left: -2px;            /*左*/
+    height: 25px;          /*高さ*/
+    line-height: 25px;     /*行の高さ*/
+    font-size: 17px;       /*文字サイズ*/
+    background: #FFC107; /*背景色*/
+    color: #ffffff;      /*色*/
+    font-weight: bold;     /*文字を太くする*/
+}
+
+.box-label-inside-the-box p{
+    margin: 0;  /*段落の外側の余白を0にする*/
+    padding: 0; /*段落の内側の余白を0にする*/
+}
+
+/**************************************************************************************/
+
+/*** タイトルを横いっぱいに広げる ***/
+
+.box-stretched-entire-width{
+    margin: 2em 0;         /*ボックスの外側の余白(他の要素との距離)*/
+    background: #dcefff; /*背景色*/
+}
+
+.box-stretched-entire-width .box-title{
+    padding: 4px;           /*ボックスの余白(中の文字と枠の間) 上下 : 左右*/
+    font-size: 1.2em;       /*文字サイズ*/
+    background: #5fb3f5;  /*背景色*/
+    text-align: center;     /*中の文字を中央に寄せる*/
+    color: #FFF;          /*色*/
+    font-weight: bold;      /*文字を太くする*/
+    letter-spacing: 0.05em; /*文字の間隔*/
+}
+
+.box-stretched-entire-width p{
+    padding: 15px 20px; /*段落の内側の余白*/
+    margin: 0;          /*段落の外側の余白を0にする*/
+}
+
+/*** さらに影をつける ***/
+
+.box-stretched-entire-width-shadow{
+    margin: 2em 0;                               /*ボックスの外側の余白(他の要素との距離)*/
+    background: #f1f1f1;                       /*背景色*/
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.22); /*影*/
+}
+
+.box-stretched-entire-width-shadow .box-title{
+    padding: 4px;           /*ボックスの余白(中の文字と枠の間) 上下 : 左右*/
+    font-size: 1.2em;       /*文字のサイズ*/
+    background: #5fc2f5;  /*背景色*/
+    text-align: center;     /*中の文字を中央に寄せる*/
+    color: #FFF;          /*色*/
+    font-weight: bold;      /*文字を太くする*/
+    letter-spacing: 0.05em; /*文字の間隔*/
+}
+
+.box-stretched-entire-width-shadow- p{
+    padding: 15px 20px; /*段落の内側の余白*/
+    margin: 0;          /*段落の外側の余白を0にする*/
+}
+
+/**************************************************************************************/
+
+/* #endregion */
+
